@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hospital Management System - Registration</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="form-container">
+        <!-- The form will send data to register.php -->
+        <form id="registrationForm" action="register.php" method="POST" novalidate>
+            <h2>Create Your Account</h2>
+
+            <div class="input-group">
+                <label for="fullName">Full Name</label>
+                <input type="text" id="fullName" name="fullName" required>
+                <span class="error-message" id="nameError"></span>
+            </div>
+
+            <div class="input-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" required>
+                <span class="error-message" id="emailError"></span>
+            </div>
+            
+            <div class="input-group">
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" name="phone" required>
+                <span class="error-message" id="phoneError"></span>
+            </div>
+
+            <div class="input-group">
+                <label for="location">Location</label>
+                <input type="text" id="location" name="location" required>
+                <span class="error-message" id="locationError"></span>
+            </div>
+
+            <div class="input-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required>
+                <span class="error-message" id="passwordError"></span>
+            </div>
+
+            <div class="input-group">
+                <label for="confirmPassword">Confirm Password</label>
+                <input type="password" id="confirmPassword" name="confirmPassword" required>
+                <span class="error-message" id="confirmPasswordError"></span>
+            </div>
+
+            <div class="input-group">
+                <label>Register as:</label>
+                <div class="radio-group">
+                    <label><input type="radio" name="userType" value="Admin" required> Admin</label>
+                    <label><input type="radio" name="userType" value="Doctor" required> Doctor</label>
+                    <label><input type="radio" name="userType" value="Patient" checked> Patient</label>
+                </div>
+                <span class="error-message" id="userTypeError"></span>
+            </div>
+
+            <button type="submit" class="submit-btn">Register</button>
+
+            <p class="signin-link">
+                Already have an account? <a href="login.php">Sign In</a>
+            </p>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
